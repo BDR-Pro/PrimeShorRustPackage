@@ -1,8 +1,17 @@
 [package]
-name = "primeshor"
-version = "0.1.0"
-edition = "2021"
+name = "primeshor" 
+version = "0.1.0" 
+edition = "2021" 
+description = "A Rust project to explore prime numbers and factorization" 
+license = "MIT"
+authors = ["Bader alotaibi baderalotaibi3@gmail.com"] 
+repository = "https://github.com/BDR-Pro/PrimeShorRustPackage" 
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+path = "src/lib.rs"
 
-[dependencies]
+[[bin]]
+name = "primeshor" 
+path = "src/main.rs"
+
+
