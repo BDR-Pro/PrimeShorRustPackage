@@ -1,6 +1,6 @@
 [package]
 name = "primeshor" 
-version = "0.1.0" 
+version = "0.1.1" 
 edition = "2021" 
 description = "A Rust project to explore prime numbers and factorization" 
 license = "MIT"
@@ -15,3 +15,6 @@ name = "primeshor"
 path = "src/main.rs"
 
 
+
+keywords = ["prime", "mathematics", "number-theory", "algorithms"]
+categories = ["algorithms", "mathematics", "science", "cryptography"]
