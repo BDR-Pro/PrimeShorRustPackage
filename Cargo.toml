@@ -1,11 +1,16 @@
 [package]
 name = "primeshor" 
-version = "0.1.1" 
+version = "0.2.0" 
 edition = "2021" 
 description = "A Rust project to explore prime numbers and factorization" 
 license = "MIT"
 authors = ["Bader alotaibi baderalotaibi3@gmail.com"] 
 repository = "https://github.com/BDR-Pro/PrimeShorRustPackage" 
+readme = "README.md"
+documentation = "https://docs.rs/primeshor"
+
+keywords = ["prime", "mathematics", "number-theory", "algorithms"]
+categories = ["algorithms", "mathematics", "science", "cryptography"]
 
 [lib]
 path = "src/lib.rs"
@@ -14,7 +19,6 @@ path = "src/lib.rs"
 name = "primeshor" 
 path = "src/main.rs"
 
-
-
-keywords = ["prime", "mathematics", "number-theory", "algorithms"]
-categories = ["algorithms", "mathematics", "science", "cryptography"]
+[dependencies]
+num-bigint = "0.4"
+num-traits = "0.2"

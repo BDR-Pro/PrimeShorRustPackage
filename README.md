@@ -2,33 +2,44 @@
 
 🚀 Welcome to the *coolest* Rust project on the block, `primeshor`! This isn't your grandpa's number-crunching library. We're here to make prime checking and factorization not just fast, but also *fun*.
 
+`But wait, what's so fun about prime numbers?"`you ask. Well, we're here to show you that prime numbers are more than just the building blocks of cryptography. They're the superheroes of the number world, and we're here to celebrate them in all their glory.
+
+## Updated `0.2.0` to handle 🚀 `BigUint` for massive numbers by parsing from a string, ensuring it's set for operations beyond usual integer bounds! ✨
+
 ## Quick Start
 
 Want to dive straight into the action? Here's how you get the party started:
 
 ```rust
+use num_bigint::BigUint;
 use primeshor::{factorize, is_prime};
 
 fn main() {
-    let n = 100;
-    match factorize(n) {
-        Ok((factor1, factor2)) => println!("Factors of {}: {}, {}", n, factor1, factor2),
+    // Define the number as a string
+    let n_str = "123456765343222456657333226789";
+    // Convert the string to a BigUint
+    let n = BigUint::parse_bytes(n_str.as_bytes(), 10).unwrap();
+
+    match factorize(n.clone()) {
+        Ok((factor1, factor2)) => println!("Factors of {}: {}, {}", n.clone(), factor1, factor2),
         Err(e) => println!("Error: {}", e),
     }
 
-    if is_prime(n) {
-        println!("{} is prime", n);
+    if is_prime(n.clone()) {
+        println!("{} is prime", n.clone());
     } else {
-        println!("{} is not prime", n);
+        println!("{} is not prime", n.clone());
     }
 }
 ```
 
 Run this snippet, and you'll be greeted with:
 
-```
-Factors of 100: 2, 50
-100 is not prime
+```bash
+
+Factors of 123456765343222456657333226789: 3529, 34983498255376156604514941
+123456765343222456657333226789 is not prime
+
 ```
 
 ## What's Shor's Algorithm?
